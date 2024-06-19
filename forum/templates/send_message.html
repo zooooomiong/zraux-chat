@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>body{font-family:monospace;background-color:#222;background:repeating-linear-gradient(45deg,#2b2b2b 0%,#2b2b2b 10%,#222 0%,#222 50%) 0 / 15px 15px;user-select:none}</style>
+
+</head>
+<body>
+    <form method="post" action="{% url 'send_message' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <center>{{ message_form.message }}</center>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send</button>
+    </form>
+</body>
+</html>

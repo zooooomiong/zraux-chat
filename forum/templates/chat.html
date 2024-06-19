@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>body{color:white;font-family:monospace;background-color:#222;background:repeating-linear-gradient(45deg,#2b2b2b 0%,#2b2b2b 10%,#222 0%,#222 50%) 0 / 15px 15px;user-select:none}</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <a href="{% url 'index' %}"><h2 class="my-4 text-center">Zraux Chat</h2></a>
+                
+                
+
+                <div class="mt-4">
+                    <iframe  src="{% url 'messages' %}" width="100%" height="400px" frameborder="0"></iframe>
+                </div>
+                <div class="mt-4">
+                <iframe  src="{% url 'send_message' %}" width="100%"frameborder="0"></iframe>
+                </div>
+
+                
+                <div class="mt-4">
+                    <h3 class="my-4 text-center">Online Users</h3>
+                    <iframe  src="{% url 'onlineusers' %}" width="100%" height="400px" frameborder="0"></iframe>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

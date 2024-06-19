@@ -1,0 +1,7 @@
+.idea
+*.json
+*.pyc
+forum/migrations
+main/.env
+*.sqlite3
+.vscode
